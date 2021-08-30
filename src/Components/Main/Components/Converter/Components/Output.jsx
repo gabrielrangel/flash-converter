@@ -9,7 +9,7 @@ function Output(){
         <>
             {output && (
                 <Card>
-                    <div className={"output"}>{output}</div>
+                    {output}
                     <div className="options"/>
                 </Card>
             )}
