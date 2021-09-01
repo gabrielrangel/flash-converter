@@ -1,5 +1,5 @@
-import {useConverter} from "../Hooks/useConverter";
-import Card from "./Card";
+import {useConverter} from "../../Hooks/useConverter";
+import Card from "./style";
 
 function Output(){
     const {state} = useConverter()
@@ -8,7 +8,7 @@ function Output(){
     return (
         <>
             {output && (
-                <Card>
+                <Card darker>
                     {output}
                     <div className="options"/>
                 </Card>

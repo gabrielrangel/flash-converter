@@ -11,19 +11,18 @@ export default styled.header`
   top: 0;
   left: 0;
   
-  background-color: #fff;
-  border-bottom: solid 1px #ddd;
-  
   display: flex;
   align-items: center;
   gap: 10px;
   
   .brand {
+    display: ${({show}) => show ? "block" : "none"};
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
     font-size: 24px;
+    font-family: "Secular One", sans-serif;
   }
   
   nav {
@@ -35,5 +34,8 @@ export default styled.header`
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    padding: 0 20px;
+    
+    font-size: 2.5em;
   }
 `

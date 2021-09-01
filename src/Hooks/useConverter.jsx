@@ -1,5 +1,5 @@
 import {createContext, useContext, useReducer} from "react";
-import {csvToJSON, JSONFormatter} from "../app";
+import {csvToJSON} from "../Scripts/csvToJSON";
 
 const Context = createContext({})
 const {Provider} = Context
@@ -13,7 +13,7 @@ const initialState = {
     output: ""
 }
 
-function reducer (state, action, dispatch) {
+function reducer (state, action) {
     switch (action.type){
         case "input":
             const {input} = state

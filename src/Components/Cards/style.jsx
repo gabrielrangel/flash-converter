@@ -3,22 +3,29 @@ import styled from "styled-components";
 export default styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 50%;
   flex-grow: 1;
+  min-width: 50%;
+  background-color: ${({darker}) => darker ? "#fff8" : "none"};
+  color: #4D5D53;
+  font-family: "Roboto", sans-serif;
   
   textarea,
   .output {
     margin: 20px;
     border: none;
     resize: none;
-    font-size: 18px;
-    line-height: 20px;
+    background-color: #aaa0;
+    font-size: 1.5rem;
     
     min-height: 40px;
     flex-grow: 1;
     :focus {
       outline: none;
     }
+  }
+  
+  code {
+    font-family: "Roboto Mono", monospace;
   }
   
   .output span {
@@ -30,17 +37,13 @@ export default styled.div`
   .line:not(.line:last-child):after{
     content: ",";
   }
-  
-  :nth-child(3) {
-    background-color: #eee;
-  }
     
   .options {
     height: 50px;
-  }
-  
-  :first-child{
-    max-width: 100%;
-    flex-grow: 1;
+    
+    * {
+      font-family: "Oswald", sans-serif;
+      font-weight: 600;
+    }
   }
 `

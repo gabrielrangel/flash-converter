@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {useConverter} from "../Hooks/useConverter";
-import Card from "./Card";
+import {useConverter} from "../../Hooks/useConverter";
+import Card from "./style";
 
 const TextArea = styled.textarea`
   height: ${({lines}) => 20*(lines + 1)}px;
