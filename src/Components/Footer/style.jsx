@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export default styled.footer`
-  flex-grow: 1;
-  background-color: transparent;
-  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: .5rem;
 `

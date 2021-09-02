@@ -3,7 +3,6 @@ import styled from "styled-components";
 export default styled.header`
   box-sizing: border-box;
   width: 100vw;
-  height: 50px;
   
   padding: 5px 10px;
  
@@ -36,6 +35,6 @@ export default styled.header`
     gap: 10px;
     padding: 0 20px;
     
-    font-size: 2.5em;
+    font-size: 2rem;
   }
 `

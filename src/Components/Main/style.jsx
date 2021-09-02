@@ -1,23 +1,31 @@
 import styled from "styled-components";
 
 export default styled.main`
-  width: 100vw;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   
-  .title {
-    padding: 5vw 0;
-  }
+  flex-grow: 1;
+  gap: 10vh;
+  
+  max-height: 100vh;
+  
   
   strong {
+    display: inline-block;
+    
     font-family: "Secular One", sans-serif;
-    font-size: 6em;
+    color: #647c90;
+    
+    font-size: 2rem;
+    
     user-select: none;
-    color: #004953;
     -webkit-user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
+    
+    @media (min-width: 768px){
+      font-size: 3rem;
+    }
   }
 `

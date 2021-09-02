@@ -1,28 +1,21 @@
 import {createContext, useContext, useReducer} from "react";
-import {csvToJSON} from "../Scripts/csvToJSON";
+import {csvToJSON} from "../Components/Converter/csvToJSON";
 
 const Context = createContext({})
 const {Provider} = Context
 
 const initialState = {
-    input: {
-        value: "",
-        lines: 0
-    },
-
+    input: "",
     output: ""
 }
 
 function reducer (state, action) {
+    const {value} = action
     switch (action.type){
         case "input":
-            const {input} = state
-            input.value = action.value
-            input.lines = action.value.split(/\n/).length + 1
-            return {...state, input}
+            return {...state, input:value}
         case "output":
-            let json = csvToJSON(action.value)
-            return {...state, output:json}
+            return {...state, output:csvToJSON(value)}
         default:
             return state
     }
